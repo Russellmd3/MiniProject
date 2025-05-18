@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPortfolio | Tools</title>
+    <style>
+        html.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <link rel="stylesheet" href="../assets/styles/components.css">
+    <link rel="stylesheet" href="../assets/styles/responsive.css">
+    <script>
+        // Apply dark mode immediately if enabled in localStorage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    <script src="../assets/scripts/tools.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="dark-mode-toggle" class="dark-mode-btn">Toggle Dark Mode</button>
+        </div>
+    </nav>
+
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <h1>Cybersecurity Tools & Skills</h1>
+        <p>Tools I use and an interactive hash converter for you to try.</p>
+
+        <!-- Tool List -->
+        <section class="tools-grid">
+            <!-- Wireshark -->
+            <div class="tool-card">
+                <h3>Wireshark</h3>
+                <p>Packet analysis for network troubleshooting and security auditing.</p>
+                <div class="tool-demo">
+                    <h4>Try a Packet Filter:</h4>
+                    <input type="text" id="packet-filter" placeholder="Filter by protocol (e.g., HTTP)">
+                    <div id="packet-output" class="packet-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Source</th>
+                                    <th>Dest</th>
+                                    <th>Protocol</th>
+                                    <th>Payload</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>192.168.1.1</td>
+                                    <td>10.0.0.1</td>
+                                    <td>HTTP</td>
+                                    <td>GET /index.html</td>
+                                </tr>
+                                <tr>
+                                    <td>10.0.0.2</td>
+                                    <td>192.168.1.2</td>
+                                    <td>TCP</td>
+                                    <td>SYN</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Nmap -->
+            <div class="tool-card">
+                <h3>Nmap</h3>
+                <p>Network scanning to discover hosts and vulnerabilities.</p>
+                <div class="tool-demo">
+                    <h4>Simulate a Scan:</h4>
+                    <button id="nmap-scan">Scan 192.168.1.1</button>
+                    <div id="nmap-output" class="tool-output"></div>
+                </div>
+            </div>
+        
+            <!-- Metasploit -->
+            <div class="tool-card">
+                <h3>Metasploit</h3>
+                <p>Penetration testing framework for exploit development.</p>
+                <div class="tool-demo">
+                    <h4>Test an Exploit:</h4>
+                    <select id="exploit-select">
+                        <option value="eternalblue">EternalBlue</option>
+                        <option value="heartbleed">Heartbleed</option>
+                    </select>
+                    <button id="exploit-run">Run</button>
+                    <div id="exploit-output" class="tool-output"></div>
+                </div>
+            </div>
+        
+            <!-- Burp Suite -->
+            <div class="tool-card">
+                <h3>Burp Suite</h3>
+                <p>Web vulnerability scanning and proxy tool.</p>
+                <div class="tool-demo">
+                    <h4>Intercept a Request:</h4>
+                    <textarea id="burp-request">GET /login?user=admin HTTP/1.1</textarea>
+                    <button id="burp-intercept">Intercept</button>
+                    <div id="burp-output" class="tool-output"></div>
+                </div>
+            </div>
+        
+            <!-- Hash Converter -->
+            <div class="tool-card">
+                <h3>Hash Converter</h3>
+                <p>Convert text to MD5, SHA-1, or SHA-256 hashes.</p>
+                <div class="tool-demo">
+                    <input type="text" id="hash-input" placeholder="Enter text to hash">
+                    <select id="hash-type">
+                        <option value="md5">MD5</option>
+                        <option value="sha1">SHA-1</option>
+                        <option value="sha256">SHA-256</option>
+                    </select>
+                    <button id="hash-button">Hash</button>
+                    <div id="hash-output" class="tool-output"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <div id="chatbot" class="chatbot">
+            <div id="chatbot-header">AI Assistant</div>
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Ask me anything...">
+            <button id="chatbot-send">Send</button>
+        </div>
+        <button id="chatbot-toggle" class="chatbot-toggle">Chat</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 CyberPortfolio. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank"><img src="../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com" target="_blank"><img src="../assets/icons/github.svg" alt="GitHub"></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script src="../assets/scripts/dark-mode.js"></script>
+    <script src="../assets/scripts/ai-chatbot.js"></script>
+    <script src="../assets/scripts/hash-converter.js"></script>
+</body>
+</html>

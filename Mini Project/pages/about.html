@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPortfolio | About</title>
+    <style>
+        html.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <link rel="stylesheet" href="../assets/styles/components.css">
+    <link rel="stylesheet" href="../assets/styles/responsive.css">
+    <script>
+        // Apply dark mode immediately if enabled in localStorage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="dark-mode-toggle" class="dark-mode-btn">Toggle Dark Mode</button>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h1>About Me</h1>
+        <p class="tagline">Aspiring Cybersecurity Expert | Defender of the Digital Realm</p>
+        <div class="about-content">
+            <div class="bio">
+                <h2>Who I Am</h2>
+                <p>I’m [Your Name], a cybersecurity enthusiast with a passion for protecting systems and outsmarting threats. From dismantling malware to building secure networks, I thrive on the challenge of staying one step ahead in this ever-evolving field.</p>
+                <p>My journey started with a curiosity about how things break—and how to fix them. Now, I’m honing my skills in penetration testing, cryptography, and AI-driven security, aiming to make a mark in the industry.</p>
+            </div>
+            <div class="skills">
+                <h2>Key Skills</h2>
+                <ul>
+                    <li>Penetration Testing (Metasploit, Burp Suite)</li>
+                    <li>Network Security (Wireshark, Nmap)</li>
+                    <li>Cryptography & Hashing</li>
+                    <li>AI & Machine Learning Basics</li>
+                    <li>Web Development (HTML, CSS, JS)</li>
+                </ul>
+            </div>
+            <div class="mission">
+                <h2>My Mission</h2>
+                <p>To secure the future by mastering cutting-edge tools and techniques. This portfolio—complete with an AI chatbot and interactive features—is my proof of concept. I’m here to learn, innovate, and protect.</p>
+                <a href="contact.html" class="cta-btn">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <div id="chatbot" class="chatbot">
+            <div id="chatbot-header">AI Assistant</div>
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Ask me anything...">
+            <button id="chatbot-send">Send</button>
+        </div>
+        <button id="chatbot-toggle" class="chatbot-toggle">Chat</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 CyberPortfolio. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank"><img src="../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com" target="_blank"><img src="../assets/icons/github.svg" alt="GitHub"></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script src="../assets/scripts/dark-mode.js"></script>
+    <script src="../assets/scripts/ai-chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPortfolio | Projects</title>
+    <style>
+        html.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <link rel="stylesheet" href="../assets/styles/components.css">
+    <link rel="stylesheet" href="../assets/styles/responsive.css">
+    <script>
+        // Apply dark mode immediately if enabled in localStorage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="dark-mode-toggle" class="dark-mode-btn">Toggle Dark Mode</button>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <h1>My Cybersecurity Projects</h1>
+        <p>Explore my work in securing the digital world.</p>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h2>Network Intrusion Detection</h2>
+                <p>Built a Python-based IDS using packet sniffing to detect anomalies in network traffic.</p>
+                <a href="#" class="cta-btn">View Details</a>
+            </div>
+            <div class="project-card">
+                <h2>Phishing Simulator</h2>
+                <p>Created a mock phishing campaign to educate users, with a custom email generator.</p>
+                <a href="#" class="cta-btn">View Details</a>
+            </div>
+            <div class="project-card">
+                <h2>Password Strength Analyzer</h2>
+                <p>Developed a tool to evaluate password security using entropy and pattern analysis.</p>
+                <a href="#" class="cta-btn">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <div id="chatbot" class="chatbot">
+            <div id="chatbot-header">AI Assistant</div>
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Ask me anything...">
+            <button id="chatbot-send">Send</button>
+        </div>
+        <button id="chatbot-toggle" class="chatbot-toggle">Chat</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 CyberPortfolio. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank"><img src="../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com" target="_blank"><img src="../assets/icons/github.svg" alt="GitHub"></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script src="../assets/scripts/dark-mode.js"></script>
+    <script src="../assets/scripts/ai-chatbot.js"></script>
+</body>
+</html>

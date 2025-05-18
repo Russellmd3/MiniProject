@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Hacking 101: Breaking In to Secure</title>
+    <style>
+        html.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../assets/styles/main.css">
+    <link rel="stylesheet" href="../../assets/styles/components.css">
+    <link rel="stylesheet" href="../../assets/styles/responsive.css">
+    <script>
+        // Apply dark mode immediately if enabled in localStorage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../../assets/images/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../tools.html">Tools</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <button id="dark-mode-toggle" class="dark-mode-btn">Toggle Dark Mode</button>
+        </div>
+    </nav>
+
+    <section class="blog-post">
+        <h1>Ethical Hacking 101: Breaking In to Secure</h1>
+        <p>Posted on March 31, 2025</p>
+        <div class="post-content">
+            <p>Ethical hacking is about breaking systems to make them stronger. It’s my favorite part of cybersecurity—legal hacking with a purpose.</p>
+            <p>I ran a basic pen-test on a mock web server. First, I used Nmap to scan for open ports—22 (SSH) and 80 (HTTP) popped up. Then, I fired up Metasploit to test an old Apache exploit. Within 20 minutes, I had a shell. Weak passwords were the culprit.</p>
+            <p>The fix? I hardened the server—disabled unused services, enforced 2FA, and patched Apache. A rescan showed no entry points. Tools like Burp Suite also helped me test the web app for XSS flaws.</p>
+            <p>It’s thrilling but humbling. Every system has a weak spot; finding it before the bad guys do is the goal. Ethical hacking isn’t just skill—it’s a mindset.</p>
+        </div>
+        <a href="../blog.html" class="cta-btn">Back to Blog</a>
+    </section>
+
+    <div class="chatbot-container">
+        <div id="chatbot" class="chatbot">
+            <div id="chatbot-header">AI Assistant</div>
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Ask me anything...">
+            <button id="chatbot-send">Send</button>
+        </div>
+        <button id="chatbot-toggle" class="chatbot-toggle">Chat</button>
+    </div>
+
+    <footer>
+        <p>© 2025 CyberPortfolio. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank"><img src="../../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com" target="_blank"><img src="../../assets/icons/github.svg" alt="GitHub"></a>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script src="../../assets/scripts/dark-mode.js"></script>
+    <script src="../../assets/scripts/ai-chatbot.js"></script>
+</body>
+</html>

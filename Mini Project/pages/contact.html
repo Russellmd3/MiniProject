@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPortfolio | Contact</title>
+    <style>
+        html.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <link rel="stylesheet" href="../assets/styles/components.css">
+    <link rel="stylesheet" href="../assets/styles/responsive.css">
+    <script>
+        // Apply dark mode immediately if enabled in localStorage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="dark-mode-toggle" class="dark-mode-btn">Toggle Dark Mode</button>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h1>Get in Touch</h1>
+        <p class="tagline">Let’s connect about cybersecurity opportunities!</p>
+        <div class="contact-content">
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h2>Other Ways to Reach Me</h2>
+                <p>Email: [your.email@example.com]</p>
+                <p>Find me on:</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com" target="_blank"><img src="../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="https://github.com" target="_blank"><img src="../assets/icons/github.svg" alt="GitHub"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <div id="chatbot" class="chatbot">
+            <div id="chatbot-header">AI Assistant</div>
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Ask me anything...">
+            <button id="chatbot-send">Send</button>
+        </div>
+        <button id="chatbot-toggle" class="chatbot-toggle">Chat</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 CyberPortfolio. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank"><img src="../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com" target="_blank"><img src="../assets/icons/github.svg" alt="GitHub"></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script src="../assets/scripts/dark-mode.js"></script>
+    <script src="../assets/scripts/ai-chatbot.js"></script>
+    <script src="../assets/scripts/contact-form.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPortfolio | Blog</title>
+    <style>
+        html.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <link rel="stylesheet" href="../assets/styles/components.css">
+    <link rel="stylesheet" href="../assets/styles/responsive.css">
+    <script>
+        // Apply dark mode immediately if enabled in localStorage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="dark-mode-toggle" class="dark-mode-btn">Toggle Dark Mode</button>
+        </div>
+    </nav>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <h1>Cybersecurity Insights</h1>
+        <p>AI-generated thoughts and tips on securing the digital frontier.</p>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <h2>The Rise of AI in Cybersecurity</h2>
+                <p>Artificial intelligence is revolutionizing threat detection. I explore how AI models can spot phishing emails with over 90% accuracy, based on recent advancements.</p>
+                <a href="blogs/ai-in-cybersecurity.html" class="cta-btn">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Zero-Day Exploits: A Growing Challenge</h2>
+                <p>Zero-day vulnerabilities are tougher than ever to combat. This post covers a recent exploit and why sandboxing is key to staying ahead in 2025.</p>
+                <a href="blogs/zero-day-exploits.html" class="cta-btn">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Password Security in the Quantum Age</h2>
+                <p>Quantum computing threatens traditional encryption. I test lattice-based cryptography and discuss its role in future-proofing passwords.</p>
+                <a href="blogs/password-security-quantum.html" class="cta-btn">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Ransomware Trends in 2025</h2>
+                <p>Ransomware is evolving with AI-driven attacks. I analyze the latest strains and share mitigation tactics like zero-trust architecture.</p>
+                <a href="blogs/ransomware-trends.html" class="cta-btn">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Ethical Hacking 101: Breaking In to Secure</h2>
+                <p>Ethical hacking is my passion. This post walks through a basic pen-test I ran on a mock system, highlighting tools like Nmap and Metasploit.</p>
+                <a href="blogs/ethical-hacking-101.html" class="cta-btn">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>The Dark Web: What I Learned Monitoring It</h2>
+                <p>I spent a week tracking dark web marketplaces. Here’s what I found about stolen data trends and how Tor keeps it hidden.</p>
+                <a href="blogs/dark-web-monitoring.html" class="cta-btn">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>IoT Security: The Weakest Link?</h2>
+                <p>Internet of Things devices are everywhere—and vulnerable. I explore a case study of a hacked smart thermostat and best practices for securing them.</p>
+                <a href="blogs/iot-security.html" class="cta-btn">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Social Engineering: The Human Exploit</h2>
+                <p>Cyberattacks often start with people, not code. I break down a simulated phishing test I ran and why awareness training matters.</p>
+                <a href="blogs/social-engineering.html" class="cta-btn">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Cloud Security: Risks in the Sky</h2>
+                <p>Misconfigured cloud storage is a goldmine for hackers. I review a real-world breach and share hardening tips for AWS and Azure.</p>
+                <a href="blogs/cloud-security.html" class="cta-btn">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Blockchain for Cybersecurity: Hype or Hope?</h2>
+                <p>Can blockchain secure our data? I experiment with a decentralized authentication prototype and weigh its pros and cons.</p>
+                <a href="E:\Mini Project\pages\blogs\blockchain-cybersecurity.html" class="cta-btn">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Malware Analysis: Dissecting a Trojan</h2>
+                <p>I reverse-engineered a trojan in a sandbox. This post details my process, from hex dumps to behavioral analysis.</p>
+                <a href="blogs/malware-analysis.html" class="cta-btn">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Endpoint Protection: Beyond Antivirus</h2>
+                <p>Antivirus alone isn’t enough anymore. I compare EDR solutions and explain why real-time monitoring is the future.</p>
+                <a href="blogs/endpoint-protection.html" class="cta-btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <div id="chatbot" class="chatbot">
+            <div id="chatbot-header">AI Assistant</div>
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Ask me anything...">
+            <button id="chatbot-send">Send</button>
+        </div>
+        <button id="chatbot-toggle" class="chatbot-toggle">Chat</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 CyberPortfolio. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank"><img src="../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com" target="_blank"><img src="../assets/icons/github.svg" alt="GitHub"></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script src="../assets/scripts/dark-mode.js"></script>
+    <script src="../assets/scripts/ai-chatbot.js"></script>
+</body>
+</html>
